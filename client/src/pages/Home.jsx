@@ -133,7 +133,7 @@ function Home() {
           <div className="max-w-3xl mx-auto bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
             <FormPage />
           </div>
-        </section> */}
+        </section>
       </main>
 
       <Footer />
