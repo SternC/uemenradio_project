@@ -1,41 +1,35 @@
-import React from "react";
-import Navbar from "../components/NavigationBar";
-import Footer from "../components/Footer";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
+    <div className="min-h-screen bg-linear-to-r from-gray-900 to-gray-800 flex flex-col items-center justify-center p-4">
+      <div className="text-center max-w-lg mx-auto">
+        <div className="mb-8">
+          <div className="text-8xl font-bold text-gray-300 mb-4">404</div>
+          <div className="h-1 w-20 bg-gradient-to-r from-red-500 to-orange-500 mx-auto"></div>
+        </div>
 
-      <main className="flex-grow">
-        <section
-          className="relative h-[70vh] flex flex-col items-center justify-center bg-cover bg-center px-5"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1596496055365-5c3122f659d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)",
-          }}
+        <h1 className="text-3xl font-bold text-white mb-4">
+          Page Not Found
+        </h1>
+        
+        <p className="text-gray-400 mb-8">
+          This page is currently under development. 
+          Please check back later or return to the homepage.
+        </p>
+
+        <Link 
+          to="/"
+          className="inline-block bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:shadow-md transition-all"
         >
-          <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white text-shadow-lg"
-            style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-          >
-            404
-          </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-white opacity-90 text-center">
-            Oops! The page you're looking for does not exist.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/"
-              className="bg-gradient-to-r from-red-400 to-orange-400 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-lg text-center"
-            >
-              🏠 GO HOME
-            </a>
-          </div>
-        </section>
-      </main>
+          ← Back to Home
+        </Link>
 
-      <Footer />
+        <p className="mt-8 text-gray-400 text-sm">
+          ALTER FM Radio
+        </p>
+      </div>
     </div>
   );
 }

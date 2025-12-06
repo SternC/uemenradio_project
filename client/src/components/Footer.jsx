@@ -12,7 +12,7 @@ function Footer() {
   const handleFooterScroll = (to) => {
     const element = document.getElementById(to);
     if (element) {
-      const offset = 80; // Offset untuk sticky navbar
+      const offset = 80; 
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
       
@@ -26,12 +26,12 @@ function Footer() {
   const menuItems = [
     { name: 'Home', to: 'home' },
     { name: 'Programs', to: null, href: '/programs' },
-    { name: 'About', to: 'about' },
+    { name: 'About', to: 'team-about' },
     { name: 'Contact Us', to: 'contact' }
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white pt-12 pb-4">
+    <footer className="bg-linear-to-r from-gray-900 to-gray-800 text-white pt-12 pb-4">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
           
@@ -72,7 +72,6 @@ function Footer() {
               {menuItems.map((item) => (
                 <li key={item.name}>
                   {item.to ? (
-                    // Gunakan ScrollToSection component
                     <ScrollToSection to={item.to}>
                       <a 
                         href={`#${item.to}`}
@@ -82,7 +81,6 @@ function Footer() {
                       </a>
                     </ScrollToSection>
                   ) : (
-                    // Link biasa untuk Programs
                     <a 
                       href={item.href}
                       className="text-gray-300 hover:text-red-400 transition-colors inline-block"
@@ -105,13 +103,13 @@ function Footer() {
                 { 
                   name: 'Instagram', 
                   icon: <FaInstagram />, 
-                  color: 'bg-gradient-to-r from-purple-600 to-pink-600',
+                  color: 'bg-linear-to-r from-purple-600 to-pink-600',
                   link: 'https://instagram.com'
                 },
                 { 
                   name: 'Line', 
                   icon: <FaLine />, 
-                  color: 'bg-gradient-to-r from-green-500 to-green-600',
+                  color: 'bg-linear-to-r from-green-500 to-green-600',
                   link: 'https://line.me'
                 },
                 { 
@@ -123,13 +121,13 @@ function Footer() {
                 { 
                   name: 'Email', 
                   icon: <FaEnvelope />, 
-                  color: 'bg-gradient-to-r from-blue-500 to-blue-600',
+                  color: 'bg-linear-to-r from-blue-500 to-blue-600',
                   link: 'mailto:info@alterfm.com'
                 },
                 { 
                   name: 'Youtube', 
                   icon: <FaYoutube />, 
-                  color: 'bg-gradient-to-r from-red-600 to-red-700',
+                  color: 'bg-linear-to-r from-red-600 to-red-700',
                   link: 'https://youtube.com'
                 }
               ].map((social) => (
@@ -151,7 +149,7 @@ function Footer() {
               ))}
             </div>
             
-            <div className="bg-gray-800/30 rounded-lg p-4">
+            <div className="bg-gray-800/30 rounded-lg ">
               <h5 className="font-semibold mb-2 text-center md:text-left">More Information</h5>
               <p className="text-gray-300 text-sm mb-1 text-center md:text-left">Email: info@alterfm.com</p>
               <p className="text-gray-300 text-sm text-center md:text-left">Phone: (021) 1234-5678</p>

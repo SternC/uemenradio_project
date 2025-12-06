@@ -3,45 +3,55 @@ import Navbar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import FormPage from "../components/Form.jsx";
 import RadioPlayer from "../components/RadioPlayer";
+import About from '../components/About.jsx';
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-grow">
-        {/* Hero Section dengan ID "home" */}
+      <main className="grow">
         <section
           id="home"
-          className="relative h-[70vh] flex items-center justify-center bg-cover bg-center px-5"
+          className="relative min-h-screen flex items-center justify-center bg-cover bg-center px-5 pb-20"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)",
+              "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(https://images.unsplash.com/photo-1585779034823-7e9ac8faec70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)",
+            backgroundAttachment: "fixed" 
           }}
         >
-          <div className="text-center text-white">
+          <div className="text-center text-white max-w-4xl mx-auto">
             <h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-shadow-lg text-white"
-            style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-shadow-lg"
+              style={{ fontFamily: "'Bebas Neue', sans-serif" }}
             >
-            WELCOME TO ALTER FM
+              ALTER FM
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Where Alternative Music Lives
+            <p className="text-2xl md:text-3xl mb-10 opacity-95 font-light">
+              The Sound of Revolution
+            </p>
+            <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-2xl mx-auto">
+              Where Alternative Music Lives • Broadcasting Since 2010
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-red-400 to-orange-400 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform shadow-lg">
-                ▶️ LISTEN LIVE
-              </button>
-              <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform">
-                📻 SEE SCHEDULE
-              </button>
+                <Link 
+                  to="/notfound"
+                  className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 md:px-10 md:py-5 rounded-full font-semibold text-base md:text-xl hover:scale-105 transition-transform shadow-lg md:shadow-2xl hover:shadow-xl md:hover:shadow-3xl inline-flex items-center justify-center"
+                >
+                    ▶️ LISTEN LIVE NOW
+                </Link>
+                <Link 
+                  to="/programs"
+                  className="bg-transparent border-2 md:border-3 border-white text-white px-6 py-3 md:px-10 md:py-5 rounded-full font-semibold text-base md:text-xl hover:scale-105 transition-transform hover:bg-white/10 inline-flex items-center justify-center"
+                >
+                    📻 SEE SCHEDULE
+                </Link>
             </div>
           </div>
         </section>
 
-        {/* Why Listen Section dengan ID "about" */}
-        <section id="about" className="py-16 px-4 max-w-6xl mx-auto scroll-mt-24">
+        <section className="py-20 px-4 max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
             WHY LISTEN TO ALTER FM?
           </h2>
@@ -62,68 +72,16 @@ function Home() {
             ))}
           </div>
         </section>
-
-        {/* Live Now Section */}
-        <section className="py-16 px-4 max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 flex items-center justify-center gap-2">
-            <span className="text-red-500">🔴</span> LIVE NOW
-          </h2>
-          <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-8 rounded-2xl flex flex-col lg:flex-row justify-between items-center gap-8">
-            <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                The Underground Vibe
-              </h3>
-              <p className="text-lg mb-2">With DJ Nova • 8PM - 12AM</p>
-              <p className="text-lg opacity-90">
-                Genre: Indie Electronic / Alternative Rock
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl w-full lg:w-auto min-w-[300px]">
-              <div className="flex gap-4 mb-4">
-                <button className="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors">
-                  ⏸️
-                </button>
-                <button className="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors">
-                  🔊
-                </button>
-              </div>
-              <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                <div className="h-full bg-white w-3/5"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Upcoming Shows */}
-        <section className="py-16 px-4 max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-            UPCOMING SHOWS
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {shows.map((show, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-400"
-              >
-                <h4 className="text-xl font-bold text-gray-800 mb-2">
-                  {show.title}
-                </h4>
-                <p className="text-gray-600 mb-2">{show.time}</p>
-                <p className="text-gray-600">{show.host}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact Section dengan ID "contact" */}
+              
+        <About />
+    
         <section
           id="stations"
-          className="scroll-mt-24 py-20 px-6 bg-gradient-to-b from-gray-100 to-gray-200"
+          className="scroll-mt-24 py-20 px-6 bg-linear-to-b from-gray-100 to-gray-200"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-          LISTEN TO INDONESIAN RADIO
+            LISTEN TO INDONESIAN RADIO
           </h2>
-
           <div className="bg-gray-100 p-8 rounded-2xl shadow-xl border border-gray-200">
             <RadioPlayer />
           </div>
@@ -131,11 +89,8 @@ function Home() {
 
         <section
           id="contact"
-          className="scroll-mt-24 py-20 px-6 bg-gradient-to-b from-gray-100 to-gray-200"
+          className="scroll-mt-24 py-20 px-6 bg-linear-to-b from-gray-100 to-gray-200"
         >
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
-            CONTACT US
-          </h2>
           <div className="max-w-3xl mx-auto bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
             <FormPage />
           </div>
@@ -169,24 +124,6 @@ const features = [
     title: "High Quality Audio",
     description:
       "Crystal clear 320kbps streaming for the best listening experience",
-  },
-];
-
-const shows = [
-  {
-    title: "Midnight Jazz Session",
-    time: "Tomorrow • 12AM - 4AM",
-    host: "Host: Miles Davis Jr.",
-  },
-  {
-    title: "Alternative Rock Hour",
-    time: "Daily • 4PM - 6PM",
-    host: "Host: Sarah Stone",
-  },
-  {
-    title: "Electronic Beats",
-    time: "Friday • 10PM - 2AM",
-    host: "Host: DJ Pulse",
   },
 ];
 
