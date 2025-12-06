@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -11,20 +11,31 @@ function Navbar() {
           </h1>
           <p className="text-sm text-gray-300 mt-1">The Sound of Revolution</p>
         </div>
-        
+
         <ul className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4 md:mb-0">
-          {['Home', 'Stream', 'Schedule', 'DJs', 'Events', 'Contact'].map((item) => (
-            <li key={item}>
-              <Link 
-                to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                className="text-gray-300 hover:text-white transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-400 hover:after:w-full after:transition-all"
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
+          {["Home", "Stream", "Schedule", "DJs", "Events", "Contact"].map(
+            (item) => (
+              <li key={item}>
+                {item === "Contact" ? (
+                  <a
+                    href="#contact"
+                    className="text-gray-300 hover:text-white transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-400 hover:after:w-full after:transition-all"
+                  >
+                    Contact
+                  </a>
+                ) : (
+                  <Link
+                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                    className="text-gray-300 hover:text-white transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-red-400 hover:after:w-full after:transition-all"
+                  >
+                    {item}
+                  </Link>
+                )}
+              </li>
+            )
+          )}
         </ul>
-        
+
         <button className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:scale-105 transition-transform shadow-lg flex items-center gap-2">
           <span>▶️</span>
           <span>LIVE NOW</span>
