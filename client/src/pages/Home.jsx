@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import FormPage from "../components/Form.jsx";
+import RadioPlayer from "../components/RadioPlayer";
 
 function Home() {
   return (
@@ -106,6 +107,18 @@ function Home() {
           </div>
         </section>
 
+        <section
+          id="stations"
+          className="scroll-mt-24 py-20 px-6 bg-gradient-to-b from-gray-100 to-gray-200"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+          LISTEN TO INDONESIAN RADIO
+          </h2>
+
+          <div className="bg-gray-100 p-8 rounded-2xl shadow-xl border border-gray-200">
+            <RadioPlayer />
+          </div>
+        </section>
 
         <section
           id="contact"
