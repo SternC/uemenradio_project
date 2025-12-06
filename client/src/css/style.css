@@ -1,11 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
 @import "tailwindcss";
+
+:root {
+  --font-logo: 'Bebas Neue', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+.font-logo {
+  font-family: var(--font-logo);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
 
 .text-shadow-lg {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-html {
-  scroll-behavior: smooth;
+.gradient-text {
+  background: linear-gradient(45deg, #f56565, #ed8936, #ecc94b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 ::-webkit-scrollbar {

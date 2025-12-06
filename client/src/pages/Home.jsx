@@ -17,8 +17,11 @@ function Home() {
           }}
         >
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-shadow-lg">
-              WELCOME TO ALTER FM
+            <h1 
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-shadow-lg text-white"
+            style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            >
+            WELCOME TO ALTER FM
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Where Alternative Music Lives
@@ -106,7 +109,6 @@ function Home() {
           </div>
         </section>
 
-
         <section
           id="contact"
           className="scroll-mt-24 py-20 px-6 bg-gradient-to-b from-gray-100 to-gray-200"
@@ -117,7 +119,7 @@ function Home() {
           <div className="max-w-3xl mx-auto bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
             <FormPage />
           </div>
-        </section>
+        </section> */}
       </main>
 
       <Footer />
