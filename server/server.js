@@ -10,9 +10,8 @@ try {
   await db.authenticate();
   console.log("✅ Database connected");
 
- await db.sync();
-
-  console.log(" Models synced");
+  await db.sync();
+  console.log("📦 Models synced");
 } catch (err) {
   console.error("❌ Database connection error:", err);
 }
@@ -26,7 +25,9 @@ app.use(cors({
 app.use(express.json());
 
 import formRoutes from './routes/formRoutes.js';
+import StationRoutes from './routes/stationRoutes.js';
 app.use('/api', formRoutes);
+app.use('/api', StationRoutes);
 
 app.listen(5000, () => {
   console.log("🚀 Server running on http://localhost:5000");

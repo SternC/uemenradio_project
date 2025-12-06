@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "./Api.jsx";
 
 export default function FormPage() {
   const [form, setForm] = useState({
@@ -17,7 +17,7 @@ export default function FormPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("/api/forms/submit", form);
+    await api.post("/api/forms/submit", form);
     alert("Form submitted!");
   };
 
