@@ -25,6 +25,9 @@ app.use(cors({
 
 app.use(express.json());
 
+import formRoutes from './routes/formRoutes.js';
+app.use('/api', formRoutes);
+
 app.listen(5000, () => {
   console.log("🚀 Server running on http://localhost:5000");
 });
