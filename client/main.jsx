@@ -3,8 +3,8 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import api from "./src/components/Api.jsx";
 
-import App from "./src/pages/App.jsx";
 import NotFound from "./src/pages/NotFound.jsx";
+import FormPage from "./src/pages/Form.jsx";
 
 api.defaults.withCredentials = true;
 
@@ -12,12 +12,12 @@ api.defaults.withCredentials = true;
 const routerPath = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <FormPage />,
   },
   {
     path: "*",
     element: <NotFound />,
-  },
+  }
 ]);
 
 
