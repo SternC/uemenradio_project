@@ -10,7 +10,9 @@ function Home() {
       <Navbar />
 
       <main className="flex-grow">
+        {/* Hero Section dengan ID "home" */}
         <section
+          id="home"
           className="relative h-[70vh] flex items-center justify-center bg-cover bg-center px-5"
           style={{
             backgroundImage:
@@ -38,7 +40,8 @@ function Home() {
           </div>
         </section>
 
-        <section className="py-16 px-4 max-w-6xl mx-auto">
+        {/* Why Listen Section dengan ID "about" */}
+        <section id="about" className="py-16 px-4 max-w-6xl mx-auto scroll-mt-24">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
             WHY LISTEN TO ALTER FM?
           </h2>
@@ -60,6 +63,7 @@ function Home() {
           </div>
         </section>
 
+        {/* Live Now Section */}
         <section className="py-16 px-4 max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8 flex items-center justify-center gap-2">
             <span className="text-red-500">🔴</span> LIVE NOW
@@ -90,6 +94,7 @@ function Home() {
           </div>
         </section>
 
+        {/* Upcoming Shows */}
         <section className="py-16 px-4 max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
             UPCOMING SHOWS
@@ -110,6 +115,7 @@ function Home() {
           </div>
         </section>
 
+        {/* Contact Section dengan ID "contact" */}
         <section
           id="stations"
           className="scroll-mt-24 py-20 px-6 bg-gradient-to-b from-gray-100 to-gray-200"
