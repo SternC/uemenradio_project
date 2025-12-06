@@ -106,25 +106,6 @@ function Home() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">STAY UPDATED</h2>
-            <p className="mb-8 text-lg opacity-90">
-              Subscribe to our newsletter for the latest show schedules and
-              exclusive content
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-grow px-4 py-3 rounded-lg text-gray-800"
-              />
-              <button className="bg-gradient-to-r from-red-500 to-orange-500 px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-                SUBSCRIBE
-              </button>
-            </div>
-          </div>
-        </section>
 
         <section
           id="contact"
