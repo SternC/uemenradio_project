@@ -15,8 +15,11 @@ function Home() {
           }}
         >
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-shadow-lg">
-              WELCOME TO ALTER FM
+            <h1 
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-shadow-lg text-white"
+            style={{ fontFamily: "'Bebas Neue', sans-serif" }}
+            >
+            WELCOME TO ALTER FM
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Where Alternative Music Lives
@@ -88,7 +91,7 @@ function Home() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-4">
+        {/* <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">STAY UPDATED</h2>
             <p className="mb-8 text-lg opacity-90">
@@ -105,7 +108,7 @@ function Home() {
               </button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       
       <Footer />
