@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import api from "../components/Api.jsx";
+import api from "./src/components/Api.jsx";
 
-import App from "./App.jsx";
-import NotFound from "./NotFound.jsx";
+import App from "./src/pages/App.jsx";
+import NotFound from "./src/pages/NotFound.jsx";
 
 api.defaults.withCredentials = true;
 
